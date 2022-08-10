@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Lego League</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+       <!-- IFont-Awesome icon -->
+       <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/all.min.css">
+       <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/v4-shims.min.css">
+       <!-- IFont-Awesome icon -->
+
+</head>
+<body>
+    
+    <div class="nav">
+        <!-- Bar and Logo -->
+        <div class="bar_logo">
+            <div class="bars" onclick="nav()">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="img">
+                <img src="image/logo_white.png" alt="">
+            </div>
+        </div>
+        <!-- Bar and Logo -->
+
+        <!-- avatar -->
+            <div class="avatar_icon">
+
+
+                <!-- bell --> 
+                <div class="bell">
+                        <i class="fa fa-bell"></i>
+                </div>
+                <!-- bell -->
+
+                <!-- Search --> 
+                <div class="search">
+                            <span class="fa fa-search"></span>
+                </div>
+                    <!-- Search -->
+
+              <!-- Main Icon -->
+              <div class="avatar_img_holder">
+                <div class="avatar_img"></div>
+                <h2>Timmy</h2>
+            </div>
+            <!-- Main Icon -->
+        </div>
+        <!-- avatar -->
+
+    </div>
+
+
+
+    <!-- Body -->
+
+    <div class="main_body">
+        <div class="side_nav" id="sideNav">
+
+            <div class="side_nav_img_holder">
+                <!-- Main Icon -->
+              <div class="avatar_img_holder">
+                <div class="avatar_img"></div>
+            </div>
+            <!-- Main Icon -->
+                <!-- <img src="image/logo.png" alt="">  -->
+                <i class="fa fa-arrow-left" onclick="back()"></i>
+            </div>
+
+            <ul>
+                <div class="side_nav_2">
+                <a href="index.html"> <i class="fa fa-dashboard  "></i> Dashboard </a>
+                <a href="items.html"> <i class="fa fa-table-cells-large"></i> Items</a>
+                <!-- <a href="#"><i class="fa fa-shopping-cart"></i>Products</a> -->
+                <a href="categories.html" class="active"><i class="fa fa-align-left"></i>Categories</a>
+                <a href="#"><i class="fa fa-chart-column"></i>Reports</a>
+                <a href="#"><i class="fa fa-gear"></i>Settings</a>
+                </div>
+            </ul>
+
+        </div>
+
+        <!-- Mini -->
+        <div class="mini_body">
+            <!-- Item Header -->
+                <div class="item_main_div">
+                    <!-- header -->
+                    <div class="item_header">
+                        <h2><a href="categories.html">Categories</a>  >  <p>First Lego League</p></h2>
+                    </div>
+                    <!-- header -->
+
+                   <div class="item_main_page">
+
+                    <div class="add_btn">
+                        <button id="add" onclick="add_item()">+ Add item</button>
+                    </div>
+
+                       <table>
+                           
+                        <tr>
+                            <th>S/N</th>
+                            <th>Display</th>    
+                            <th>Name</th>
+                            <!-- <th>Category</th> -->
+                            <th>Action</th>
+                        </tr>
+
+                       <tr>
+                        <td id="num">1</td>
+                        <td><img src="Image/items/ev3.png" alt=""></td>
+                        <td>EV3</td>
+                        <!-- <td>Fist Lego League</td> -->
+                        <td><button id="edit" onclick="edit()"> <i class="fa fa-pen-square" id="ed_icon"></i> <p>Edit</p></button> <button id="delete"  onclick="delet()"> <i class="fa fa-trash" id="ed_icon"></i><p>Delete</p></button></td>
+                       </tr>
+
+                       <tr>
+                        <td id="num">2</td>
+                        <td><img src="Image/items/large_motor.png" alt=""></td>
+                        <td>Large Motor</td>
+                        <!-- <td>Fist Lego League</td> -->
+                        <td><button id="edit" onclick="edit()"> <i class="fa fa-pen-square" id="ed_icon"></i> <p>Edit</p></button> <button id="delete"  onclick="delet()"> <i class="fa fa-trash" id="ed_icon"></i><p>Delete</p></button></td>
+                       </tr>
+
+                       <tr>
+                        <td id="num">3</td>
+                        <td><img src="Image/items/medium_motor.png" alt=""></td>
+                        <td>Medium Motor</td>
+                        <!-- <td>Fist Lego League</td> -->
+                        <td><button id="edit" onclick="edit()"> <i class="fa fa-pen-square" id="ed_icon"></i> <p>Edit</p></button> <button id="delete"  onclick="delet()"> <i class="fa fa-trash" id="ed_icon"></i><p>Delete</p></button></td>
+                       </tr>
+
+                       <tr>
+                        <td id="num">4</td>
+                        <td><img src="Image/items/color_sensor.png" alt=""></td>
+                        <td>Color Sensor</td>
+                        <!-- <td>Fist Lego League</td> -->
+                        <td><button id="edit" onclick="edit()"> <i class="fa fa-pen-square" id="ed_icon"></i> <p>Edit</p></button> <button id="delete"  onclick="delet()"> <i class="fa fa-trash" id="ed_icon"></i><p>Delete</p></button></td>
+                       </tr>
+
+            
+                         
+                       
+                       </table>
+                   </div> 
+            </div>
+        <!-- Mini -->
+    </div>
+
+
+
+<!-- Add Item -->
+<div class="edit_item_drop" id="item_add">
+    <div class="edit_inner_div_holder">
+        
+            <!-- Form Section -->
+<div class="form_section">
+    <div class="item_text">
+        
+    <h2>Add Item</h2>
+    <h3 onclick="item_remove()">+</h3>
+    </div>
+<form action="" method="post">
+
+
+    <!-- Name -->
+    <div class="name">
+        <input type="text" name="name" id="name" required/>
+        <label for="name" class="label-name">
+            <span class="content-name">Name</span>
+        </label>
+    </div>
+    <!-- Name -->
+
+     <!-- Name -->
+     <div class="name">
+            <select name="categories" id="cate">
+                  <option value="Fll">First Lego League</option>
+                <!-- <option value="FTC">First Tech Challenge</option>
+                <option value="hardware">Main Hardware</option>
+                <option value="furniture">Furnitures</option>
+                <option value="gadgets">Gadgets</option> -->
+
+
+            </select>
+        
+    </div>
+    <!-- Name -->
+    
+    <!-- IMage -->
+    <div class="name">
+        <input type="file" name="image" id="" accept="image">
+        
+    </div>
+    <!-- Image -->
+
+    <!-- Button -->
+    <div class="button_3">
+        <button id="edit" onclick="edit()">Update</button>
+        <button id="delete" onclick="not()" >Cancel</button>
+
+    </div>
+    <!-- Button -->
+
+   
+   
+</form>
+</div>
+<!-- End Of Form Section -->
+        
+    </div>
+</div>
+
+<!-- Add item -->
+
+
+
+    <div class="edit_item_drop" id="item_drop">
+            <div class="edit_inner_div_holder">
+                
+                    <!-- Form Section -->
+        <div class="form_section">
+            <div class="item_text">
+                
+            <h2>Edit Item</h2>
+            <h3 onclick="not()">+</h3>
+            </div>
+        <form action="" method="post">
+
+
+            <!-- Name -->
+            <div class="name">
+                <input type="text" name="name" id="name" required/>
+                <label for="name" class="label-name">
+                    <span class="content-name">Name</span>
+                </label>
+            </div>
+            <!-- Name -->
+
+             <!-- Name -->
+             <div class="name">
+                    <select name="categories" id="cate">
+                        <option value="Fll">First Lego League</option>
+                        <!-- <option value="FTC">First Tech Challenge</option>
+                        <option value="hardware">Main Hardware</option>
+                        <option value="furniture">Furnitures</option>
+                        <option value="gadgets">Gadgets</option> -->
+
+                    </select>
+                
+            </div>
+            <!-- Name -->
+            
+            <!-- IMage -->
+            <div class="name">
+                <input type="file" name="image" id="" accept="image">
+                
+            </div>
+            <!-- Image -->
+
+            <!-- Button -->
+            <div class="button_3">
+                <button id="edit" onclick="edit()">Update</button>
+                <button id="delete" onclick="note()" >Cancel</button>
+
+            </div>
+            <!-- Button -->
+
+           
+           
+        </form>
+    </div>
+    <!-- End Of Form Section -->
+                
+            </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="edit_item_drop" id="item_delete">
+        <div class="edit_inner_div_holder">
+            
+                <!-- Form Section -->
+    <div class="form_section">
+        <div class="item_text">
+            
+        <h2>Delete Item</h2>
+        </div>
+        <form action="" method="post">
+
+        <div class="item_inner_text">
+            <p>
+                Are you sure you want to Delete
+            </p>
+            <br> 
+            <h2>
+                This Item
+            </h2>
+        </div>
+
+        <!-- Button -->
+        <div class="button_3">
+            <button id="edit" onclick="delet()">Delete</button>
+            <button id="delete" onclick="dele()">Cancel</button>
+
+        </div>
+        <!-- Button -->
+
+       
+       
+    </form>
+</div>
+<!-- End Of Form Section -->
+            
+        </div>
+</div>
+
+
+
+
+</div>
+
+    <!-- Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
