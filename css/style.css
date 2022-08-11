@@ -389,14 +389,18 @@ button:hover{
 /* Avatar */
 .avatar_icon{
     /* border: 1px solid; */
-    justify-content: center;
-    flex-basis: 20%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* place-content: center; */
+    flex-basis: 22%;
     color: #fff;
-    display: flex;
+    /* display: flex; */
 }
 .avatar_img_holder{
     /* border: 1px solid crimson; */
-    /* flex-basis: 38%; */
+    /* flex-basis: 18%; */
     place-content: center;
     margin-left: 15px;
     align-items: center;
@@ -404,12 +408,22 @@ button:hover{
     justify-content: space-between;
 }
 .avatar_img{
-    border: 1px solid;
+    /* border: 1px solid red; */
     width: 50px;
-    padding: 5px;
+    /* padding: 5px; */
+    overflow: hidden;
     height: 50px;
     border-radius: 50%;
+    display: flex;
+    place-content: center;
+    align-items: center;
     /* border-radius: 50px; */
+}
+.avatar_img img{
+        width: 100%;
+        /* height: 100%; */
+        /* position: relative; */
+    
 }
 .avatar_img_holder h2{
     font-size: 19px;
@@ -420,10 +434,11 @@ button:hover{
 
 /* bell */
 .bell,.search{
-    flex-basis: 31%;
+    /* flex-basis: 31%; */
+    height: 100%;
     place-content: center;
-    border: 1px solid rgba(196, 196, 196, 0.096);
-    /* margin-right: 5px; */
+    border-right: 1px solid rgba(196, 196, 196, 0.096);
+    /* margin-right: 5px; */padding: 10px;
     align-items: center;
     cursor: pointer;
     display: flex;
@@ -468,7 +483,7 @@ button:hover{
     position: fixed;
     display: flex;
     flex-direction: column;
-    transition: 0.4s ease-in;
+    transition: 0.9s ease-in-out;
 }
 
 .side_nav_2{
@@ -505,6 +520,7 @@ button:hover{
 .side_nav_img_holder{
     display: flex;
     justify-content: space-between;
+    /* place-content: center; */
     align-items: center;
     padding: 15px;
     /* border: 1px solid; */
@@ -513,8 +529,8 @@ button:hover{
 
 .side_nav_img_holder img{
     width: 50px;
-    margin-left: 30px;
-    border: 1px solid;
+    /* margin-left: 30px; */
+    /* border: 1px solid red; */
 }
 .side_nav_img_holder i{
     cursor: pointer;
@@ -563,6 +579,9 @@ button:hover{
             align-items: center;
             text-align: center;
             /* fle */
+        }
+        .item_header h2 i{
+            padding-right: 8px;
         }
         .item_header h2 a{
             text-decoration: none;
@@ -643,7 +662,7 @@ button:hover{
        } 
        .rec_divs{
            /* border: 1px solid red; */
-           margin: 10px;
+           /* margin: 10px; */
            flex-basis: 50%;
            display: flex;
            place-content: center;
@@ -748,6 +767,7 @@ button:hover{
    #ed_icon{
        display: none;
    }
+   
    
    table td{
     /* padding: 10px; */
@@ -892,16 +912,58 @@ button:hover{
 
 /* Setting */
 .settings{
-    border: 1px solid  red;
+    /* border: 1px solid  red; */
     height: 80vh;
     display: flex;
-    /* place-content: center; */
+    place-content: center;
     /* align-items: center; */
     /* flex-direction: column; */
 }
 .setting_avatar{
-
+    /* border: 1px solid; */
+    flex-basis: 35%;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
-
-
-
+.user_img{
+    /* border: 1px solid; */
+    overflow: hidden;
+    /* display: grid; */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px;
+    display: grid;
+    place-content: center;
+    /* align-items: center; */
+}
+.user_img img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.user_name{
+    /* border: 1px solid; */
+}
+.change_section{
+    /* border: 1px solid; */
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+}
+.change_profile{
+    /* border: 1px solid; */
+    display: none;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+}
+#mini_ser_img{
+    width: 100px;
+    height: 100px;
+}
